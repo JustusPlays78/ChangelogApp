@@ -15,7 +15,7 @@ async function createWindow () {
     const fileTitles = await fetchRepositoryFiles();
     console.log(fileTitles);
 
-    const INCREMENT = 0.03
+    /*const INCREMENT = 0.03
     const INTERVAL_DELAY = 100
 
     let c = 0
@@ -27,7 +27,7 @@ async function createWindow () {
         } else {
             c = (-INCREMENT * 5)
         }
-    }, INTERVAL_DELAY)
+    }, INTERVAL_DELAY)*/
 }
 
 app.whenReady().then(createWindow)
