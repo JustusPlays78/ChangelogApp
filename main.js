@@ -1,8 +1,10 @@
-const { app, BrowserWindow } = require('electron/main')
+const { app, BrowserWindow, Menu } = require('electron/main')
+const {fetchRepositoryFiles} = require("./components/js/repoDatabase.js");
+//Menu.setApplicationMenu(false); // Top Bar
 
 let progressInterval
 
-function createWindow () {
+async function createWindow () {
     const win = new BrowserWindow({
         width: 1000,
         height: 800
@@ -10,8 +12,11 @@ function createWindow () {
 
     win.loadFile('index.html')
 
+    const fileTitles = await fetchRepositoryFiles();
+    console.log(fileTitles);
+
     const INCREMENT = 0.03
-    const INTERVAL_DELAY = 100 // ms
+    const INTERVAL_DELAY = 100
 
     let c = 0
     progressInterval = setInterval(() => {

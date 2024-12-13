@@ -1,0 +1,76 @@
+<section class="container mx-auto p-6 bg-gray-800 shadow-md rounded-lg mt-6">
+    <h3 class="text-xl font-bold">Profile Settings</h3>
+    <div class="space-y-6">
+        <div class="flex space-x-4">
+            <div class="w-full">
+                <label for="settings-profile-dirselectbutton" class="block text-sm font-medium text-gray-300">Profile Name:</label>
+                <label id="settings-profile-dirselectprofilename" class="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" style="background-color: #2d3748 !important;">Kein Profil</label>
+                <input id="settings-profile-dirselectprofilenameinput" type="text" class="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" style="background-color: #2d3748 !important; display: none"/>
+            </div>
+            <div class="w-full">
+                <label for="settings-profile-dirselectbutton" class="block text-sm font-medium text-gray-300">Select Profile</label>
+                <button id="settings-profile-dirselectbutton" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Select Directory</button>
+            </div>
+        </div>
+        <div class="w-full">
+            <input id="settings-profile-dirselectpath" type="text" name="name" class="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" style="background-color: #2d3748 !important;" readonly/>
+        </div>
+        <div class="flex space-x-4">
+            <div class="w-full">
+                <label for="short-input" class="block text-sm font-medium text-gray-300">Ticketnumber:</label>
+                <input id="short-input" type="text" maxlength="7" class="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" style="background-color: #2d3748 !important;">
+            </div>
+            <div class="w-full">
+                <label for="role-dropdown" class="block text-sm font-medium text-gray-300">Ticket:</label>
+                <select id="role-dropdown" class="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" style="background-color: #2d3748 !important;">
+                    <option value="QA">QA</option>
+                    <option value="DEV">DEV</option>
+                    <option value="DEV">GD</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="text-right">
+            <button id="settings-profile-edit-button" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Edit Profile
+            </button>
+            <button id="settings-profile-save-button" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Save Profile
+            </button>
+        </div>
+    </div>
+</section>
+<section class="container mx-auto p-6 bg-gray-800 shadow-md rounded-lg mt-6">
+    <h3 class="text-xl font-bold">Git Settings</h3>
+    <div class="space-y-6">
+        <div class="w-full">
+            <div>
+                <label for="settings-repo-input" class="block text-sm font-medium text-gray-300">Repository Link:</label>
+                <input id="settings-repo-input" type="text" class="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" style="background-color: #2d3748 !important;">
+            </div>
+        </div>
+        <div class="w-full">
+            <div class="space-y-6">
+                <div>
+                    <label for="settings-token-input" class="block text-sm font-medium text-gray-300">Git Token:</label>
+                    <input id="settings-token-input" type="password" class="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" style="background-color: #2d3748 !important;">
+                </div>
+            </div>
+        </div>
+        <div class="w-full">
+            <label for="settings-type-dropdown" class="block text-sm font-medium text-gray-300">Git Type:</label>
+            <select id="settings-type-dropdown" class="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" style="background-color: #2d3748 !important;">
+                <option value="Fix">GitHub</option>
+                <option value="Feat">GitLab</option>
+                <option value="Sonst">Gitea</option>
+                <option value="Sonst">Sonst (noch nicht implementiert)</option>
+            </select>
+        </div>
+
+        <div class="text-right">
+            <button id="settings-save-button" class="bg-blue-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600">
+                Save Settings
+            </button>
+        </div>
+    </div>
+</section>
